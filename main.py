@@ -30,7 +30,7 @@ def store_output(func, length):
     sys.stdout = saved_stdout
     return mystdout.getvalue()
 
-def train():
+def load_text():
 	with open (TRAINING_FILE, "r") as myfile:
 	    data = myfile.readlines()
 	text = ''
@@ -38,7 +38,7 @@ def train():
 		text += d
 	tokens = nltk.word_tokenize(text)
 	nltk_text = nltk.Text(tokens)
-	print "finished training model"
+	print "finished loading training text"
 	return nltk_text
 
 def pre_process(out):	
@@ -98,7 +98,7 @@ def send_tweet(twitter, tweet):
 	
 def main():
     twitter = setup_twitter()
-    nltk_text = train()
+    nltk_text = load_text()
     while 1:
 		tweet = None
 		while tweet is None:
