@@ -6,6 +6,8 @@ Source code for [Robot Shakespeare](http://www.twitter.com/RobotShakespear), an 
 
 It works by using [NLTK](http://nltk.org) to analyze the complete works of one William Shakespeare and generate an [n-gram](http://en.wikipedia.org/wiki/N-gram) model, i.e. a word-to-word transition probability model. It then generates snippets of occasionally beautiful prose by doing a random walk on the text using a [Markov Model](http://en.wikipedia.org/wiki/Markov_model).
 
+If you want to run it, you need NLTK to analyze and generate text, and tweepy to tweet. And you need your own twitter account/bot because [this one](http://www.twitter.com/RobotShakespear) is busy...
+
 ### How to make your own twitter bot
 
 This is well documented, but to create a twitter bot, you need to create a twitter account, then setup an application on [Twitter dev](http://dev.twitter.com)with OAuth protocol. [This link](http://www.apcoder.com/2013/10/03/twitter-bot-20-minutes-node-js/) explains it pretty well minus the node.js stuff. Once you have the access token, you can very easily setup a python script which tweets to your new bot using [tweepy](https://github.com/tweepy/tweepy).
