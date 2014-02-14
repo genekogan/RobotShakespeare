@@ -51,7 +51,7 @@ def pre_process(out):
 	# hack: get rid of stage names (capital letters)
 	words = out.split(' ')
 	for word in words:
-		if len(re.compile('[A-Z]').findall(word)) == len(re.compile('[A-Za-z]').findall(word)) and len(word) > 3:
+		if len(re.compile('[A-Z]').findall(word)) == len(re.compile('[A-Za-z]').findall(word)) and len(word) > 1:
 			try:
 				out = re.sub(word, '', out)
 			except:
